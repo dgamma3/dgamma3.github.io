@@ -34,10 +34,14 @@ const location = window.location.hostname;
             Accept: 'application/json',
             'Content-Type': 'application/json',
         },
-        body: {a:'c'}
+        body: {
+   "name": "movie",
+   "rating":"6"
+    
+}
     };
     try {
-        const fetchResponse = await fetch(`https://hxrvk2dkpf.execute-api.ap-southeast-2.amazonaws.com/prod`, settings);
+        const fetchResponse = await fetch(`https://vuvtyb6pnh.execute-api.ap-southeast-2.amazonaws.com/prod/create`, settings);
         const data = await fetchResponse.json();
         return data;
     } catch (e) {
